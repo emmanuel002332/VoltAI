@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltAI - AI Electricity Solver</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+</head>
+<body>
+
+    <canvas id="star-canvas"></canvas>
+
+    <header>
+        <div class="logo">Volt<span>AI</span></div>
+        <nav>
+            <button id="theme-toggle" aria-label="Toggle Night/Day Mode">☀️</button>
+            <a href="#console" class="btn-primary">Get Template</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="badge">Advanced Physics Solver</span>
+                <h1>Master Electricity with <br><span>AI-Powered</span> Precision</h1>
+                <p>The ultimate dashboard for engineering students. Solve circuit laws and generate LaTeX derivations in seconds.</p>
+                <div class="hero-btns">
+                    <button class="btn-primary" onclick="document.getElementById('console').scrollIntoView({behavior: 'smooth'})">Start Solving</button>
+                    <button class="btn-outline">View Components</button>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="circuit-container">
+                    <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path id="circuit-path" d="M50 200 H150 V100 H250 V300 H350" stroke="var(--border-color)" stroke-width="4" stroke-linecap="round"/>
+                        <path class="current-flow" d="M50 200 H150 V100 H250 V300 H350" stroke="var(--accent-color)" stroke-width="4" stroke-linecap="round"/>
+                        <circle cx="50" cy="200" r="6" fill="var(--accent-color)" class="node-pulse" />
+                        <circle cx="350" cy="300" r="6" fill="var(--accent-color)" class="node-pulse" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="console" class="solver-console">
+        <div class="console-box">
+            <div class="console-header">
+                <div class="dots"><span></span><span></span><span></span></div>
+                <div class="console-title">VoltAI Terminal — v1.0</div>
+            </div>
+            <div class="console-body">
+                <div class="input-area">
+                    <label>Enter Physics Problem:</label>
+                    <textarea id="ai-input" placeholder="e.g. Find total resistance for resistors in parallel..."></textarea>
+                    <button id="solve-btn" class="btn-primary">Generate Derivation</button>
+                </div>
+                <div class="output-area">
+                    <div id="ai-status">Ready to solve...</div>
+                    <div id="ai-response" class="hidden">
+                        <p class="step"><strong>Step 1:</strong> Apply Parallel Formula:</p>
+                        <div id="math-output" class="latex-box"></div>
+                        <p class="step"><strong>Step 2:</strong> Compute Result.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature-grid">
+            <div class="f-card"><h3>⚡ Instant Solving</h3><p>Step-by-step Kirchhoff results.</p></div>
+            <div class="f-card"><h3>📐 CAD Ready</h3><p>Export to engineering reports.</p></div>
+            <div class="f-card"><h3>📱 Fully Responsive</h3><p>Lab-ready mobile design.</p></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 VoltAI Template. Designed for Engineers.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
