@@ -1,5 +1,4 @@
 html {
- html {
     scroll-behavior: smooth;
     background-color: var(--bg-color); /* Prevents white flash on load */
 }
